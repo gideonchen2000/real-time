@@ -1,0 +1,26 @@
+rover:
+  name: gemini
+#  name: orion
+#  name: soyuz
+  update-freq: 60000
+
+
+broker:
+  exchange:
+    direct:
+      rover:
+        name: gemini-direct-exchange #name for the rovers exchange
+        routing-key: __gemini #
+#        name: orion-direct-exchange #name for the rovers exchange
+#        routing-key: __orion #
+#        name: soyuz-direct-exchange #name for the rovers exchange
+#        routing-key: __soyuz #
+      base:
+        name: tyco-direct-exchange #name for the rovers e
+        routing-key: __scheduled-update #
+    fanout:
+      name: tyco-fanout-exchange
+    queue:
+      name: gemini
+#      name: orion
+#      name: soyuz
